@@ -14,10 +14,10 @@ class PluginPackagingTests extends AbstractCliTestCase {
 	
 	@Test void unwantedConfigFilesAreNotBundledWithPlugin() {
 		assertThat "Plugin zip contents", zipContents, hasItem(endsWith("EnhancedScaffoldingResources.groovy"))
-		assertThat "Plugin zip contents", zipContents, not(hasItem(endsWith("UrlMappings.groovy")))
-		assertThat "Plugin zip contents", zipContents, not(hasItem(endsWith("DataSource.groovy")))
-		assertThat "Plugin zip contents", zipContents, not(hasItem(endsWith("Config.groovy")))
 		assertThat "Plugin zip contents", zipContents, not(hasItem(endsWith("BuildConfig.groovy")))
+		assertThat "Plugin zip contents", zipContents, not(hasItem(endsWith("Config.groovy")))
+		assertThat "Plugin zip contents", zipContents, not(hasItem(endsWith("DataSource.groovy")))
+		assertThat "Plugin zip contents", zipContents, not(hasItem(endsWith("UrlMappings.groovy")))
 	}
 	
 	private ZipFile zipFile
