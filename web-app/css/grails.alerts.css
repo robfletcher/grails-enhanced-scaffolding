@@ -66,7 +66,7 @@
 }
 
 a.dismiss-alert {
-	background: url(../images/skin/icon_close.png);
+	background: url(../images/icon_close.png);
 	text-indent: -9999px;
 	height: 42px;
 	position: absolute;
