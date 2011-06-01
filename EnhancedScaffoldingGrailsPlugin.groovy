@@ -4,7 +4,8 @@ class EnhancedScaffoldingGrailsPlugin {
     def grailsVersion = "1.4 > *"
     def dependsOn = [jquery: "1.6.1.1 > * ", modernizr: "1.7.2 > *"]
     def pluginExcludes = [
-            "grails-app/views/error.gsp"
+            "grails-app/views/**/*",
+            "web-app/qunit/**/*"
     ]
 
     def title = "Enhanced Scaffolding"
