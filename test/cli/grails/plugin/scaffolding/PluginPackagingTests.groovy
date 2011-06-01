@@ -8,14 +8,16 @@ import static org.junit.Assert.*
 
 class PluginPackagingTests extends AbstractCliTestCase {
 
-	@Test
-	void testExcludedItemsAreNotBundledWithPlugin() {
-		def entryNames = zipFile.entries()*.name
-		assertThat "Plugin zip contents", entryNames, not(hasItem(endsWith(".gsp")))
+	@Test void testArtefactsAreNotBundledWithPlugin() {
+		assertThat "Plugin zip contents", zipContents, not(hasItem(endsWith(".gsp")))
 	}
 	
-	def getPluginVersion() {
-		getClass().classLoader.loadClass("EnhancedScaffoldingGrailsPlugin").newInstance().version
+	@Test void unwantedConfigFilesAreNotBundledWithPlugin() {
+		assertThat "Plugin zip contents", zipContents, hasItem(endsWith("EnhancedScaffoldingResources.groovy"))
+		assertThat "Plugin zip contents", zipContents, not(hasItem(endsWith("UrlMappings.groovy")))
+		assertThat "Plugin zip contents", zipContents, not(hasItem(endsWith("DataSource.groovy")))
+		assertThat "Plugin zip contents", zipContents, not(hasItem(endsWith("Config.groovy")))
+		assertThat "Plugin zip contents", zipContents, not(hasItem(endsWith("BuildConfig.groovy")))
 	}
 	
 	private ZipFile zipFile
@@ -34,4 +36,13 @@ class PluginPackagingTests extends AbstractCliTestCase {
 	@After void closeZipFile() {
 		zipFile.close()
 	}
+	
+	private Collection<String> getZipContents() {
+		def entryNames = zipFile.entries()*.name
+	}
+
+	private String getPluginVersion() {
+		getClass().classLoader.loadClass("EnhancedScaffoldingGrailsPlugin").newInstance().version
+	}
+	
 }
