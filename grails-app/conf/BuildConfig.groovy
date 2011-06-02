@@ -23,7 +23,7 @@ grails.project.dependency.resolution = {
 		compile(":jquery:1.6.1.1", ":modernizr:1.7.2") {
 			export = false
 		}
-		runtime(":resources:1.0", ":jquery-ui:1.8.10.1") {
+		runtime(":resources:1.0") {
 			export = false
 		}
     }
