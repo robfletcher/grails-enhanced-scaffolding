@@ -1,0 +1,10 @@
+/.idea/
+/devDB.*
+*.iml
+/target/
+
+
+/out/
+*.log
+/CodeNarcReport.html
+*.tmproj
