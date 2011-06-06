@@ -6,3 +6,4 @@
 .DS_Store
 /target/
 /out/
+*.sha1
