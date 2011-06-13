@@ -78,6 +78,14 @@
 					
 				// whenever selection changes update the selected list
 				select.bind('change', updateSelection);
+				
+				// function that ensures output list is directly below and the same width as the autocompleter
+				function resizeOutputList(event) {
+					selectedList.width(autocompleter.outerWidth()).offset({left: autocompleter.offset().left});
+				}
+
+				// when the window resizes make sure the output list is positioned correctly
+				$(window).bind('resize', resizeOutputList);
 		
 				// each element in the selected list has a button that can be used to remove it from the selection
 				$('a.autocomplete-remove-selection').live('click', function() {
@@ -95,7 +103,8 @@
 				if (autocompleter.outerWidth() < select.outerWidth()) {
 					autocompleter.width(select.outerWidth());
 				}
-				selectedList.insertAfter(autocompleter).width(autocompleter.outerWidth()).offset({left: autocompleter.offset().left});
+				selectedList.insertAfter(autocompleter)
+				resizeOutputList();
 				updateSelection(null, 0);
 			});
 		} else {
