@@ -13,7 +13,7 @@
 			$.extend(settings, options);
 		}
 		
-		if (jQuery.ui.autocomplete != undefined) {
+		if (jQuery.ui != undefined && jQuery.ui.autocomplete != undefined) {
 			return this.each(function() {
 				var select = $(this);
 				var selectId = select.attr('id');
