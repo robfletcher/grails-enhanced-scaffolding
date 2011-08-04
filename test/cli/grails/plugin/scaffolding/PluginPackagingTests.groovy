@@ -13,11 +13,13 @@ class PluginPackagingTests extends AbstractCliTestCase {
 	}
 	
 	@Test void unwantedConfigFilesAreNotBundledWithPlugin() {
-		assertThat "Plugin zip contents", zipContents, hasItem(endsWith("EnhancedScaffoldingResources.groovy"))
-		assertThat "Plugin zip contents", zipContents, not(hasItem(endsWith("BuildConfig.groovy")))
-		assertThat "Plugin zip contents", zipContents, not(hasItem(endsWith("Config.groovy")))
-		assertThat "Plugin zip contents", zipContents, not(hasItem(endsWith("DataSource.groovy")))
-		assertThat "Plugin zip contents", zipContents, not(hasItem(endsWith("UrlMappings.groovy")))
+		def files = zipContents
+		println files
+		assertThat "Plugin zip contents", files, hasItem(endsWith("EnhancedScaffoldingResources.groovy"))
+		assertThat "Plugin zip contents", files, not(hasItem(endsWith("BuildConfig.groovy")))
+		assertThat "Plugin zip contents", files, not(hasItem(endsWith("Config.groovy")))
+		assertThat "Plugin zip contents", files, not(hasItem(endsWith("DataSource.groovy")))
+		assertThat "Plugin zip contents", files, not(hasItem(endsWith("UrlMappings.groovy")))
 	}
 	
 	private ZipFile zipFile
@@ -25,7 +27,7 @@ class PluginPackagingTests extends AbstractCliTestCase {
 	@Before void packagePlugin() {
 		execute(["package-plugin"])
 		assert waitForProcess() == 0
-		verifyHeader()
+//		verifyHeader()
 
 		def packagedPlugin = new File("grails-enhanced-scaffolding-${pluginVersion}.zip")
 		assert packagedPlugin.isFile()
@@ -38,7 +40,7 @@ class PluginPackagingTests extends AbstractCliTestCase {
 	}
 	
 	private Collection<String> getZipContents() {
-		def entryNames = zipFile.entries()*.name
+		zipFile.entries()*.name
 	}
 
 	private String getPluginVersion() {
