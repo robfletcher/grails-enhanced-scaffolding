@@ -16,6 +16,7 @@ grails.project.dependency.resolution = {
 		test("org.seleniumhq.selenium:selenium-htmlunit-driver:latest.release") {
 			exclude "xml-apis"
 		}
+		test "org.codehaus.geb:geb-spock:0.6.1"
     }
 	plugins {
 		compile ":cache-headers:1.1.5"

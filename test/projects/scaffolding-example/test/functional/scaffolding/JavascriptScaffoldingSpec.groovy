@@ -3,7 +3,7 @@ package scaffolding
 import spock.lang.Stepwise
 import scaffolding.example.*
 import scaffolding.pages.*
-import grails.plugin.geb.GebSpec
+import geb.spock.GebSpec
 
 @Stepwise
 class JavascriptScaffoldingSpec extends GebSpec {

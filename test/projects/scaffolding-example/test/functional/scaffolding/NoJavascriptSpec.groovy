@@ -1,6 +1,6 @@
 package scaffolding
 
-import grails.plugin.geb.GebSpec
+import geb.spock.GebSpec
 import org.openqa.selenium.WebDriver
 import org.openqa.selenium.htmlunit.HtmlUnitDriver
 
