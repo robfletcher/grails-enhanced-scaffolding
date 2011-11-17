@@ -12,7 +12,7 @@ grails.project.dependency.resolution = {
     }
     dependencies {
 		test("org.hamcrest:hamcrest-all:1.1") {
-			excludes "junit", "easymock", "jmock"
+			transitive = false
 			exported = false
 		}
     }
@@ -21,7 +21,7 @@ grails.project.dependency.resolution = {
             export = false
         }
 		compile ":jquery:1.6.1.1", ":modernizr:1.7.2"
-		runtime(":resources:1.0") {
+		runtime(":resources:1.0.2") {
 			export = false
 		}
     }

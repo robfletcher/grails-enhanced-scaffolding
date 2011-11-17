@@ -1,7 +1,7 @@
 class EnhancedScaffoldingGrailsPlugin {
 
     def version = "1.0.BUILD-SNAPSHOT"
-    def grailsVersion = "1.4 > *"
+    def grailsVersion = "2.0 > *"
     def pluginExcludes = [
             "grails-app/views/**/*",
             "web-app/qunit/**/*"
