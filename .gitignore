@@ -7,3 +7,5 @@
 /target/
 /out/
 *.sha1
+/.idea
+*.iml

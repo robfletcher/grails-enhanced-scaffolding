@@ -17,7 +17,7 @@ grails.project.dependency.resolution = {
 		}
     }
     plugins {
-        build(":tomcat:$grailsVersion", ":release:1.0.0.M2", ":svn:latest.integration") {
+        build(":tomcat:$grailsVersion", ":release:1.0.0.RC3", ":svn:latest.integration") {
             export = false
         }
 		compile ":jquery:1.6.1.1", ":modernizr:1.7.2"
