@@ -40,6 +40,12 @@ AJAX-enhances scaffolding list pages so that pagination and sorting are done via
 
 Replaces `select` elements used to represent domain class properties that have a [_range_][4] constraint with native HTML _range_ inputs in browsers that support them.
 
+## Included libraries
+
+The enhanced scaffolding plugin depends on the following software:
+
+* The [jQuery.tipsy][http://onehackoranother.com/projects/jquery/tipsy] plugin.
+
 ## To-do
 
 ### General

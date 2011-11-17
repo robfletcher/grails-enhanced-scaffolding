@@ -39,6 +39,8 @@ modules = {
 	"grails.errors" {
 		defaultBundle "scaffolding"
 		dependsOn "modernizr", "jquery"
+		resource url: [plugin: "enhanced-scaffolding", dir: "js", file: "jquery.tipsy.js"]
+		resource url: [plugin: "enhanced-scaffolding", dir: "css", file: "tipsy.css"]
 		resource url: [plugin: "enhanced-scaffolding", dir: "js", file: "grails.errors.js"]
 		resource url: [plugin: "enhanced-scaffolding", dir: "js", file: "grails.errors.loader.js"]
 		resource url: [plugin: "enhanced-scaffolding", dir: "css", file: "grails.errors.css"]
