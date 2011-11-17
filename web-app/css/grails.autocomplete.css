@@ -44,11 +44,20 @@ ul.autocomplete-selected .value {
 }
 
 ul.autocomplete-selected a.autocomplete-remove-selection {
-	color: #666
+	color: #404040;
 	display: inline-block;
+	font-size: 1.2em;
+	font-weight: bold;
+	line-height: 0.75;
 	position: absolute;
 	right: 0.5em;
 	text-decoration: none;
+    text-shadow: 0 1px 0 #fff; 
+  -webkit-border-radius: 8px; 
+     -moz-border-radius: 8px; 
+          border-radius: 8px; 
+		  opacity: 0.25; 
+		  filter: alpha(opacity=25); 
 }
 
 .ie6 ul.autocomplete-selected a.autocomplete-remove-selection,
