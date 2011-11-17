@@ -44,16 +44,11 @@ ul.autocomplete-selected .value {
 }
 
 ul.autocomplete-selected a.autocomplete-remove-selection {
-	background: url(../images/icon_delete.png) no-repeat 0 1px transparent;
+	color: #666
 	display: inline-block;
-	height: 16px;
-	overflow: hidden;
 	position: absolute;
 	right: 0.5em;
-	top: 0.5em;
 	text-decoration: none;
-	text-indent: -9999px;
-	width: 16px;
 }
 
 .ie6 ul.autocomplete-selected a.autocomplete-remove-selection,

@@ -13,7 +13,7 @@
 			$.extend(settings, options);
 		}
 		
-		if (jQuery.ui != undefined && jQuery.ui.autocomplete != undefined) {
+		if (jQuery.ui.autocomplete != undefined) {
 			return this.each(function() {
 				var select = $(this);
 				var selectId = select.attr('id');
@@ -70,7 +70,7 @@
 							});
 						} else if (matchingItem.length === 0 && option.is(':selected')) {
 							var newItem = $('<li><span class="value">' + optionText + '</span></li>').data('object-id', optionId);
-							$('<a class="autocomplete-remove-selection" href="#" role="button"></a>').appendTo(newItem).attr('title', settings.removeLabel).text(settings.removeLabel);
+							$('<a class="autocomplete-remove-selection" href="#" role="button">&times;</a>').appendTo(newItem).attr('title', settings.removeLabel);
 							newItem.hide().appendTo(selectedList).slideDown(speed);
 						}
 					});
