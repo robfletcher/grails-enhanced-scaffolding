@@ -44,6 +44,7 @@ Replaces `select` elements used to represent domain class properties that have a
 
 ### General
 
+* Use [pjax][5] instead of _grails.list_.
 * Get rid of the _*.loader.js_ scripts as they are only necessary for _qunit_. Possibly use a config driven loader to allow apps to easily disable unwanted enhancements.
 * Move autofocus enhancement to Grails core.
 
@@ -59,3 +60,4 @@ Replaces `select` elements used to represent domain class properties that have a
 [2]:http://jqueryui.com/demos/autocomplete/
 [3]:http://diveintohtml5.org/history.html
 [4]:http://grails.org/doc/latest/ref/Constraints/range.html
+[5]:http://pjax.heroku.com/
