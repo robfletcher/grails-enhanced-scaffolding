@@ -60,6 +60,12 @@ ul.autocomplete-selected a.autocomplete-remove-selection {
 		  filter: alpha(opacity=25); 
 }
 
+ul.autocomplete-selected a.autocomplete-remove-selection:hover {
+	color: #000;
+	opacity: 0.4; 
+	filter: alpha(opacity=40); 
+}
+
 .ie6 ul.autocomplete-selected a.autocomplete-remove-selection,
 .ie7 ul.autocomplete-selected a.autocomplete-remove-selection {
 	display: inline;
