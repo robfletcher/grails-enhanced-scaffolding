@@ -1,5 +1,16 @@
 modules = {
 	
+	tipsy {
+		dependsOn "jquery"
+		resource url: [plugin: "enhanced-scaffolding", dir: "js", file: "jquery.tipsy.js"]
+		resource url: [plugin: "enhanced-scaffolding", dir: "css", file: "tipsy.css"]
+	}
+	
+	pjax {
+		dependsOn "jquery"
+		resource url: [plugin: "enhanced-scaffolding", dir: "js/pjax", file: "jquery.pjax.js"]
+	}
+	
 	// an AJAX loading indicator
 	"grails.ajaxloader" {
 		defaultBundle "scaffolding"
@@ -21,7 +32,7 @@ modules = {
 	// AJAX-enables scaffolded list pages
 	"grails.list" {
 		defaultBundle "scaffolding"
-		dependsOn "modernizr", "jquery"
+		dependsOn "modernizr", "jquery", "pjax"
 		resource url: [plugin: "enhanced-scaffolding", dir: "js", file: "grails.list.js"]
 		resource url: [plugin: "enhanced-scaffolding", dir: "js", file: "grails.list.loader.js"]
 	}
@@ -38,9 +49,7 @@ modules = {
 	// replaces standard error messages with tooltips attached to each individual field
 	"grails.errors" {
 		defaultBundle "scaffolding"
-		dependsOn "modernizr", "jquery"
-		resource url: [plugin: "enhanced-scaffolding", dir: "js", file: "jquery.tipsy.js"]
-		resource url: [plugin: "enhanced-scaffolding", dir: "css", file: "tipsy.css"]
+		dependsOn "modernizr", "jquery", "tipsy"
 		resource url: [plugin: "enhanced-scaffolding", dir: "js", file: "grails.errors.js"]
 		resource url: [plugin: "enhanced-scaffolding", dir: "js", file: "grails.errors.loader.js"]
 		resource url: [plugin: "enhanced-scaffolding", dir: "css", file: "grails.errors.css"]

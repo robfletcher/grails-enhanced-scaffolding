@@ -45,7 +45,6 @@ This is a sample project for prototyping changes to Grails scaffolding.
     * open autocomplete with focus? Mouse double-click?
     * suppress remove button on autocomplete for mandatory many-to-one
     * autocomplete for enums & inList constraint?
- * FOUC prevention by fade-in with CSS transition
  * Slicker version of confirmation on delete
  * Use jQuery-UI slider if !Modernizr.inputs.range
 

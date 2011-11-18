@@ -45,12 +45,12 @@ Replaces `select` elements used to represent domain class properties that have a
 The enhanced scaffolding plugin depends on the following software:
 
 * The [jQuery.tipsy][http://onehackoranother.com/projects/jquery/tipsy] plugin.
+* The [pjax][5] library.
 
 ## To-do
 
 ### General
 
-* Use [pjax][5] instead of _grails.list_.
 * Get rid of the _*.loader.js_ scripts as they are only necessary for _qunit_. Possibly use a config driven loader to allow apps to easily disable unwanted enhancements.
 * Move autofocus enhancement to Grails core.
 
